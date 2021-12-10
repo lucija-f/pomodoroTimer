@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Pomodoro timer",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["index.js"]
+    }
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Pomodoro",
+    "default_icon": "poma.png"
+  },
+  "permissions": ["tabs", "notifications"]
+}
